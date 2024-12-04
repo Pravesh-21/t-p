@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T&P Registration</title>
+</head>
+<body>
+    <h1>T&P Registration Form</h1>
+    <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="">Select Department</option>
+            <option value="CSE">Computer Science & Engineering</option>
+            <option value="ECE">Electronics & Communication Engineering</option>
+            <option value="ME">Mechanical Engineering</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="EE">Electrical Engineering</option>
+        </select><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <label for="semesterMarks">Semester-wise Marks (comma-separated):</label>
+        <input type="text" id="semesterMarks" name="semesterMarks" required><br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+        <label for="additionalInfo">Additional Information:</label><br>
+        <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept the terms and conditions</label><br><br>
+
+        <button type="button" onclick="displayDetails()">Submit</button>
+    </form>
+
+    <h2>Submitted Details</h2>
+    <table border="1" id="detailsTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Department</th>
+                <th>Gender</th>
+                <th>Semester Marks</th>
+                <th>Resume</th>
+                <th>Additional Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Details will be added dynamically -->
+        </tbody>
+    </table>
+</body>
+</html>
